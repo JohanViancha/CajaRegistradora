@@ -9,7 +9,6 @@ export class ProductosComponent implements OnInit {
 
   @Input() nombre:string;
   @Input() productos: Productos[];
-  @Input() elimino:boolean;
   ruta:string;
 
   @Output() producto:EventEmitter<Productos>;
@@ -22,9 +21,6 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  eliminar(){
-    
-  }
   comprar(produto: Productos){ 
     this.producto.emit(produto);
   }
