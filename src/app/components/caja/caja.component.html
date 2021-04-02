@@ -1,14 +1,14 @@
 <h3>Mi pedido</h3>
 <hr>
-<span class="pagar">Total a pagar: {{totalPagar}}</span>
+<span class="pagar">Total a pagar: $ {{calcularTotal()}}</span>
 <hr>
 <ol>
 
     <li *ngFor="let item of pedido; let i = index">
         <div>
-            <p>Producto: {{item.nombre}}</p>
+            <p>Producto: {{item.producto.nombre}}</p>
             <p>Cantidad: {{item.cantidad}}</p>
-            <p>Subtotal: {{item.total}}</p>
+            <p>Subtotal: $ {{item.total}}</p>
             <button (click)="eliminar(i)" class="eliminar">Eliminar</button>
             <hr>
         </div>

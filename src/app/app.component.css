@@ -1,18 +1,21 @@
 main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-app-productos {
+.productos {
     width: 70%;
-    border: 1px solid #000;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-app-caja {
+.caja {
     border: 1px solid #000;
-    width: 20%;
+    box-sizing: border-box;
+    width: 30%;
+    margin-left: 10px;
+    text-align: center;
+}
+
+h2 {
     text-align: center;
 }

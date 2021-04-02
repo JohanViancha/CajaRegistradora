@@ -1,5 +1,6 @@
+import { Productos } from './productos.model';
 export class Pedidos{
-    nombre:string;
+    producto: Productos;
     cantidad:number;
     total:number;
 

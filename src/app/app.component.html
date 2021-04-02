@@ -1,4 +1,17 @@
+<h2>
+    Caja Registradora</h2>
 <main>
-    <app-productos (producto)="comprar_producto($event)"></app-productos>
-    <app-caja [pedido]="pedidos" [totalPagar]="totalPagar"></app-caja>
+
+
+    <div class="productos">
+
+        <app-productos nombre="Comidas" [productos]="comidas" (producto)="comprar_producto($event)"></app-productos>
+        <app-productos nombre="Bebidas" [productos]="bebidas" (producto)="comprar_producto($event)"></app-productos>
+
+    </div>
+
+    <div class="caja">
+        <app-caja (eliminarProducto)="eliminarProducto($event)" [pedido]="pedidos"></app-caja>
+    </div>
+
 </main>
