@@ -1,1 +1,24 @@
-<p>productos works!</p>
+<h4 class="subtitle">Comida</h4>
+
+<div class="content">
+    <div *ngFor="let item of comidas">
+        <img width="200px" height="150px" [src]="ruta + item.imagen" alt="">
+        <span>Producto: {{item.nombre}}</span>
+        <p>Precio: $ {{item.precio}}</p>
+        <p>Stock: {{item.stock}}</p>
+        <button>Comprar</button>
+    </div>
+</div>
+
+<h4 class="subtitle">Bebidas</h4>
+<div class="content">
+
+    <div *ngFor="let item of bebidas">
+        <img width="200px" height="200px" [src]="ruta + item.imagen" alt="">
+        <span>Producto: {{item.nombre}}</span>
+        <p>Precio: $ {{item.precio}}</p>
+        <p>Stock: {{item.stock}}</p>
+        <button>Comprar</button>
+    </div>
+
+</div>
