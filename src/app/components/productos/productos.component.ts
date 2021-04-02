@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Productos } from '../../models/productos.model';
 @Component({
   selector: 'app-productos',
@@ -11,7 +11,10 @@ export class ProductosComponent implements OnInit {
   bebidas: Productos[];
   ruta:string;
 
+  @Output() producto:EventEmitter<Productos>;
+
   constructor() { 
+    this.producto = new EventEmitter();
     this.ruta= '../../../assets/img/';
     this.comidas = [
       {
@@ -96,6 +99,10 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  comprar(produto: Productos){ 
+    this.producto.emit(produto);
   }
 
 }

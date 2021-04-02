@@ -1,7 +1,16 @@
 <h3>Mi pedido</h3>
 <hr>
-<ul>
-    <li>
+<span class="pagar">Total a pagar: {{totalPagar}}</span>
+<hr>
+<ol>
 
+    <li *ngFor="let item of pedido; let i = index">
+        <div>
+            <p>Producto: {{item.nombre}}</p>
+            <p>Cantidad: {{item.cantidad}}</p>
+            <p>Subtotal: {{item.total}}</p>
+            <button (click)="eliminar(i)" class="eliminar">Eliminar</button>
+            <hr>
+        </div>
     </li>
-</ul>
+</ol>

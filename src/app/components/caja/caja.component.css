@@ -1,0 +1,23 @@
+.pagar {
+    background-color: green;
+    color: #FFF;
+    padding: 5px 15px;
+}
+
+li {
+    list-style: none;
+}
+
+ol {
+    padding: 0px;
+    list-style-position: inside;
+}
+
+.eliminar {
+    background-color: #801400;
+    color: #FFF;
+    border-radius: 10px;
+    border: 0px;
+    padding: 8px 20px;
+    outline: none;
+}

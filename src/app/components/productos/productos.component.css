@@ -44,3 +44,8 @@ span {
     color: #FFF;
     margin: 0px
 }
+
+.desactivado {
+    cursor: not-allowed !important;
+    background-color: gray !important;
+}

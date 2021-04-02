@@ -1,4 +1,4 @@
 <main>
-    <app-productos></app-productos>
-    <app-caja></app-caja>
+    <app-productos (producto)="comprar_producto($event)"></app-productos>
+    <app-caja [pedido]="pedidos" [totalPagar]="totalPagar"></app-caja>
 </main>

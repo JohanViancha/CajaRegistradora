@@ -6,19 +6,19 @@
         <span>Producto: {{item.nombre}}</span>
         <p>Precio: $ {{item.precio}}</p>
         <p>Stock: {{item.stock}}</p>
-        <button>Comprar</button>
+        <button [ngClass]="{'desactivado': item.stock <= 0}" (click)="comprar(item) ">{{item.stock<= 0? 'Agotado': 'Comprar'}}</button>
     </div>
 </div>
 
-<h4 class="subtitle">Bebidas</h4>
-<div class="content">
+<h4 class="subtitle ">Bebidas</h4>
+<div class="content ">
 
-    <div *ngFor="let item of bebidas">
-        <img width="200px" height="200px" [src]="ruta + item.imagen" alt="">
+    <div *ngFor="let item of bebidas ">
+        <img width="200px " height="200px " [src]="ruta + item.imagen " alt=" ">
         <span>Producto: {{item.nombre}}</span>
         <p>Precio: $ {{item.precio}}</p>
         <p>Stock: {{item.stock}}</p>
-        <button>Comprar</button>
+        <button (click)="comprar(item) ">Comprar</button>
     </div>
 
 </div>
