@@ -18,7 +18,7 @@
         <span>Producto: {{item.nombre}}</span>
         <p>Precio: $ {{item.precio}}</p>
         <p>Stock: {{item.stock}}</p>
-        <button (click)="comprar(item) ">Comprar</button>
+        <button [ngClass]="{'desactivado': item.stock <= 0}" (click)="comprar(item) ">{{item.stock<= 0? 'Agotado': 'Comprar'}}</button>
     </div>
 
 </div>

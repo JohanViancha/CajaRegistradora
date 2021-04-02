@@ -20,20 +20,22 @@ export class AppComponent {
   comprar_producto(producto: Productos){
     
     const index = this.pedidos.findIndex(element => element.nombre == producto.nombre);
-    producto.stock -=1;
-
-    if(index == -1){
-      this.pedidos.push({"nombre":producto.nombre, "cantidad":1, "total": producto.precio});
-    
-    }
-    else{
+    if(producto.stock>0){
+      producto.stock -=1;
+      if(index == -1){
+        this.pedidos.push({"nombre":producto.nombre, "cantidad":1, "total": producto.precio});
       
-      this.pedidos[index].cantidad ++;
-      this.pedidos[index].total += producto.precio;
-      
-    }
+      }
+      else{
+        
+        this.pedidos[index].cantidad ++;
+        this.pedidos[index].total += producto.precio;
+        
+      }
+      this.totalPagar = this.totalPagar + producto.precio;
+  }
    
-    this.totalPagar = this.totalPagar + producto.precio;
+   
 
  
     //this.pedidos.push({"nombre":producto.nombre, "cantidad":1, "total": producto.precio});
