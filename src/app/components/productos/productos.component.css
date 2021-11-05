@@ -4,14 +4,42 @@
     flex-direction: row;
     justify-content: space-around;
 }
+.content-image{
+  overflow: hidden;
 
-.content div {
+}
+
+.image-product:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}
+
+.content .content-product {
     flex-basis: auto;
     border: 1px solid gray;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
     margin: 10px 0px;
-    padding: 5px;
+    padding-bottom: 8px;
     text-align: center;
+    cursor: default;
+}
+
+.price{
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px;
+  background-color: rgb(0, 87, 128);
+  border-radius: 5px;
+  color: #FFF;
+}
+.subtitle,.name-product{
+  font-weight: bold;
+  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.content .content-product:hover{
+  border-bottom: 5px solid green;
 }
 
 .content div img {

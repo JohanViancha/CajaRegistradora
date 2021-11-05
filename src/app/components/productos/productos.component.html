@@ -1,11 +1,15 @@
 <h4 class="subtitle">{{nombre}}</h4>
 
 <div class="content">
-    <div *ngFor="let item of productos">
-        <img width="200px" height="150px" [src]="ruta + item.imagen" alt="">
-        <span>Producto: {{item.nombre}}</span>
-        <p>Precio: $ {{item.precio}}</p>
-        <p>Stock: {{item.stock}}</p>
-        <button [ngClass]="{'desactivado': item.stock <= 0}" (click)="comprar(item) ">{{item.stock<= 0? 'Agotado': 'Comprar'}}</button>
+    <div *ngFor="let item of productos" class="content-product">
+        <div class="content-image">
+          <img width="200px" height="150px" class="image-product" [src]="ruta + item.imagen" alt="">
+        </div>
+        <hr>
+        <span class="name-product">{{item.nombre}}</span>
+        <p class="price">$ {{item.precio | number}}</p>
+        <p>Disponible: {{item.stock}}</p>
+        <hr>
+        <button [ngClass]="{'desactivado': item.stock <= 0}" (click)="comprar(item) "><i class="fas fa-shopping-cart"></i> {{item.stock<= 0? 'Agotado': 'Comprar'}}</button>
     </div>
 </div>
