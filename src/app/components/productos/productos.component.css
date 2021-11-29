@@ -3,9 +3,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    border: 1px solid rgb(0, 87, 128);
 }
 .content-image{
   overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
 
 }
 
@@ -22,6 +24,7 @@
     padding-bottom: 8px;
     text-align: center;
     cursor: default;
+    box-sizing: border-box;
 }
 
 .price{
@@ -66,11 +69,12 @@ span {
 }
 
 .subtitle {
-    background-color: grey;
+    border: 1px solid;
+    border-top: 5px solid rgb(0, 87, 128);
     display: block;
     padding: 10px;
-    color: #FFF;
-    margin: 0px
+    color: rgb(0, 87, 128);;
+    margin: 0px;
 }
 
 .desactivado {

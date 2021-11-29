@@ -1,7 +1,11 @@
 .pagar {
     background-color: green;
+    width: 200px;
     color: #FFF;
     padding: 5px 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
 }
 
 li {
@@ -21,3 +25,16 @@ ol {
     padding: 8px 20px;
     outline: none;
 }
+
+h3,span{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+@media screen and (max-width:274px) {
+    .pagar{
+        width: 100px;
+    }
+}
+
+
