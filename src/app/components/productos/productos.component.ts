@@ -15,7 +15,7 @@ export class ProductosComponent implements OnInit {
 
   constructor() { 
     this.producto = new EventEmitter();
-    this.ruta= '../../../assets/img/';
+    this.ruta= 'CajaRegistradora/assets/img/';
   }
 
   ngOnInit(): void {
